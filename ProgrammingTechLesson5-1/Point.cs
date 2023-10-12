@@ -50,5 +50,9 @@ namespace ProgrammingTechLesson5_1
             return Math.Sqrt(Math.Pow(CoordinatesX - point.CoordinatesX, 2) +
                              Math.Pow(CoordinatesY - point.CoordinatesY, 2));
         }
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Point: ({CoordinatesX}, {CoordinatesY})");
+        }
     }
 }

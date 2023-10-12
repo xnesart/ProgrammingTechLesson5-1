@@ -1,10 +1,12 @@
+using System;
+
 namespace ProgrammingTechLesson5_1
 {
     public class Line
     {
         private Point _pointStart;
         private Point _pointEnd;
-
+        private Point[] vertices = new Point[2];
         public Point GetStartPoint() => _pointStart;
         public Point GetEndPoint() => _pointEnd;
         public double Length() => _pointStart.Distance(_pointEnd);
@@ -14,6 +16,8 @@ namespace ProgrammingTechLesson5_1
         {
             this._pointStart = pointStart;
             this._pointEnd = pointEnd;
+            vertices[0] = pointStart;
+            vertices[1] = pointEnd;
         }
 
         /// <summary>
@@ -29,6 +33,14 @@ namespace ProgrammingTechLesson5_1
             }
 
             return false;
+        }
+        public void DisplayVertices()
+        {
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                Console.Write($"Vertex {i + 1}: ");
+                vertices[i].DisplayInfo();
+            }
         }
     }
 }

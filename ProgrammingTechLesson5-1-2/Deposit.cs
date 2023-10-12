@@ -79,8 +79,11 @@ namespace ProgrammingTechLesson5_1_2
             endYear = int.Parse(closeYear);
             //вычисляем количество лет
             int result = endYear - startYear;
+            decimal startSum = this.Summ;
             //расчитываем сумму выплат
             CalculationOfSum(result);
+            Console.WriteLine($"Должно вернуться денег: {this.Summ}");
+            Console.WriteLine($"Денег накопится за весь период вклада:{Summ - startSum}");
         }
 
         //Расчёт суммы с течением времени
